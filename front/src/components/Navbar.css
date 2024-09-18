@@ -1,0 +1,320 @@
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** navbar */
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  /* width: 100%; */
+  background-color: #333;
+  color: white;
+  top: 0;
+  z-index: 1;  
+  position: sticky; 
+}
+
+  .navbar a{
+      color: white;
+      text-decoration: none;
+
+
+  }
+.nav-links {
+  display: flex;
+  justify-content: flex-end; 
+  list-style: none;
+  width: 65%;
+  align-items: center; 
+}
+
+/* color logo */
+.logo{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: var(--mainTransition);
+  cursor: pointer;
+
+}
+
+
+
+/* alignemement a nav */
+.home,
+.register,
+.login,
+.add,
+.Logout
+{
+/* padding: 10 20px; */
+text-decoration: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+margin: 0 10px;
+transition: all 0.3s ease-in-out;
+}
+
+
+li{
+  margin: 0 5px;
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover{
+  color: skyblue;
+  border-bottom: 2px solid red;
+}
+
+
+
+
+/* cacher menu burger */
+
+.mobile-menu-icon {
+  display:none;
+
+}
+
+
+
+/*! media querie navbar hamburger */
+
+@media screen and (min-width:781px) { 
+  .nav-links-mobile{
+     /* display: none; */
+  }
+
+  /* ne casse pas ma navbar ul li quand on repasse en mode pc  */
+ .nav-links-mobile { 
+   display: flex;
+   justify-content: flex-end; 
+   list-style: none;
+   width: 65%;
+   align-items: center; 
+   z-index: 1;
+ }
+ 
+ }
+ 
+ 
+ @media screen and (max-width:780px){ 
+   .logo{
+       display:flex;
+       position: absolute;
+       top:15px;
+       left:35px;
+       color: yellow;
+       
+   }
+   .nav-links{
+       display: none;
+   }
+   .user {
+       display: none;
+   }
+
+   .nav-links-mobile h1 {
+       display: none;
+   }
+ 
+   .nav-links-mobile {
+       /* position: absolute;  */
+       display: block;
+       list-style: none;
+       background-color: #333;
+       left: 0;
+       top: 75px;
+       transition: all 0.5s ease-out;
+       width: 100%;
+       height: 100vh;
+       text-align: center;
+       padding: 0;
+       margin: 0;
+       /* no scrolling */
+       overflow-y: scroll;
+       overflow-x: hidden;
+      /* -webkit-overflow-scrolling: touch; */
+   }
+
+   /* ma navbar et mon menu nav-links-mobile reste collé à la navbar à l'ouverture du menu 
+     mobile */
+    .nav-links-mobile, .navbar {
+        position: fixed;
+        width: 100%;
+    }
+
+
+
+
+ 
+ 
+   .nav-links-mobile li {
+       display: block;
+       padding: 20px 0;
+       border-bottom: 1px solid #fff;
+       /* ligne sous le block pour séparer */
+   }
+ 
+   .nav-links-mobile li a {
+       color: #fff;
+       text-decoration: none;
+       font-size: 1.5rem;
+       transition: all 0.5s ease-out;
+   }
+ 
+   .nav-links-mobile li a:hover {
+       color: #333;
+       background-color: #fff;
+   }
+ 
+   /* icon hamburger */
+   .mobile-menu-icon { 
+       display: block;
+       position: absolute;
+       font-size: 30px;
+       color: white;
+       background-color: #222;
+       border:none;
+       top: 0;
+       right: 0;
+       padding: 10px;
+       cursor: pointer;
+       z-index: 1;
+   }
+ 
+   .mobile-menu-icon:hover {
+       color: #333;
+       background-color: #fff;
+   }
+ 
+   .mobile-menu-icon.active {
+       color: #333;
+       background-color: #fff;
+   }
+ 
+   .nav-links-mobile.active  {
+       height: 100vh;
+   }
+ 
+   .nav-links-mobile.active li {
+       opacity: 1;
+   }
+ 
+  
+ 
+ 
+ 
+ 
+ /* .navbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 75px;
+   background-color: #333;
+   color: white;
+ } */
+   .home,
+   .register,
+   .login ,
+   .Logout
+   { 
+      color: white;
+      text-align: center;
+      padding: 32px;
+      width: 100%;
+      transition: all 0.5s ease;
+   }
+ 
+ 
+   /* .register{
+       display: none;
+ 
+   } */
+ 
+   /* menu burger nav */
+ 
+   .mobile-menu-icon{
+       display: block;
+       position: absolute;
+       font-size: 30px;
+       color: white;
+       background-color: #222;
+       border:none;
+       outline: none;
+       top: 15px;
+       right: 25px;
+
+
+      
+ 
+   }
+ 
+   .mobile-menu-icon:hover{
+       color: #333;
+       cursor: pointer;
+   }
+ 
+   .nav-links-mobile li:hover{
+       background-color: #222;
+       cursor: pointer;
+   }
+
+ 
+   
+ }
+
+
+
+
+ 
+ 
+

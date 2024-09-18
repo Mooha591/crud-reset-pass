@@ -1,0 +1,284 @@
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+    --primaryLightColor: #d4e6a5;
+    --primaryColor: #142e02;
+    --primaryDarkColor: #c02c03;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBackground: #f1f5f8;
+    --mainOverlay: rgba(35, 10, 36, 0.4);
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #afafaf;
+    --mainRed: #bd0303;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.3rem;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    --mainBorderRadius: 0.25rem;
+    --smallWidth: 70vw;
+    --maxWidth: 40rem;
+    --fullWidth: 1170px;
+  
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    }
+  
+  
+  
+  /*  button dark-mode */
+  
+  .dark-mode__toggle {
+  display: flex;
+  top: 80px;
+  right: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+  /* z-index: 10; */
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .dark-mode{
+  background-color: #333;
+  color: rgb(112, 107, 107);
+  
+  }
+  
+  
+  /* en mode dark-mode mon background de tache devient rouge */
+  .dark-mode .table-thead{
+  background-color:var(--clr-red-light);
+  color: white;
+  }
+  
+  .dark-mode .task{
+  background-color:teal;
+  color: white;
+  }
+  .dark-mode .title-item{
+  color: var(--offWhite);
+  }
+  .dark-mode .noTask h3{
+  color: var(--offWhite);
+  }
+  .dark-mode .form-group-add h3{
+  color: var(--offWhite);
+  }
+  .dark-mode .addTask {
+  color: var(--offWhite);
+  background-color: var(--clr-black);
+  }
+  
+  .div-alert {
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  }
+  
+  /* article-> form */
+  .container-form-add {
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr 2fr;
+  align-items: center;
+  height: 300px;
+  width: 70vw;
+  
+  }
+  
+  @media screen and (min-width: 992px) {
+  .container-form-add {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    width: 80vw;
+  }
+  .div-utilisateur {
+    grid-row: 1/1;
+  
+  }
+  .form-group-add {
+    grid-row: 2/3;
+    grid-column: 2/3; 
+    grid-template-rows: 1fr 2fr; 
+    grid-template-columns: 2fr 1fr; 
+    
+  }
+  .nbr-tasks {
+    grid-column: 1/3;
+  }
+  .input-form-add {
+    padding: 0.6rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  
+  .div-btn-addTask { 
+    grid-row: 2/3;
+    grid-column: 2/3;
+    place-self: center;
+  }
+  
+  }
+  
+  .form-group-add {
+  margin: 0 auto;
+  display: grid;
+  height: 100%; 
+  align-items: center;
+  }
+  
+  .form-group-add h3 {
+  text-align: center;
+  }
+  
+  /* USER infos */
+  .div-utilisateur {
+  text-align: center;
+  margin: 0 auto;
+  /* margin-top: 70px; */
+  }
+  
+  .utilisateur{
+    color: crimson;
+    font-weight: 600;
+    text-transform: capitalize;
+    }
+    
+  /* positionner le nom d'utilisateur */
+  @media screen and (max-width: 780px) {
+  .div-utilisateur {
+    margin-top: 75px;
+  }
+  .alert{
+    margin-top: 75px;
+  
+  }
+  
+  
+  }
+  
+  
+  /* input  */
+  .form-control-add {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    transition: var(--mainTransition);
+  }
+  .input-form-add input {
+    padding: 0.5rem;
+    width: 300px;
+  }
+  
+  /* noTask */
+  .noTask h3{
+  text-align: center;
+  } 
+  
+    /* button add task */
+  .div-btn-addTask {
+    /* center bouton */
+  margin: 0 auto; 
+  }
+  .addTask{
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+  
+  .addTask:hover{
+    background-color: teal;
+    color: snow;
+  }
+  
+  .container-list-items {
+  margin: 2rem auto;
+  width: 75vw;
+  }
+  @media screen and (min-width: 992px) { 
+  .container-list-items {
+    width: 60vw;
+  }
+  }
+  @media screen and (min-width: 1200px) {
+  .container-list-items {
+    width: 50vw;
+  }
+  }
+  .container-list-items .task {
+  border: 1px solid var(--primaryColor); 
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  margin: 1rem auto;
+  padding: 0.7rem;
+  }
+  
+  .title-item p {
+  letter-spacing: 2px;
+  font-weight: 600;
+  /* overflow-wrap pour éviter débordement mot long */
+  overflow-wrap: anywhere; 
+  }
+  .div-btn {
+  justify-self: center;
+  }
+  
+  .buttonEdit, .buttonDelete {
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
+  border-radius: var(--border-radius);
+  padding: 0.3rem;
+  box-shadow: var(--shadow);
+  display: inline-block;
+  }
+  
+  .buttonEdit {
+  color: green;
+  }
+  .dark-mode .buttonEdit {
+  color: #d4e6a5;
+  }
+  .buttonDelete {
+  color: var(--primaryDarkColor);
+  }
+  
+  /* Alpha container */
+  .container-alpha {
+  display: grid;
+  }
+  .div-deleteAll {
+  margin: 0 auto;
+  }
+  .deleteAll {
+  text-transform: capitalize;
+  border: 1px red ;
+  color: crimson;
+  font-size: 1rem;
+  cursor: pointer;
+  border: transparent;
+  border-radius: var(--mainBorderRadius);
+  padding: 0.7rem;
+  box-shadow: 1px 3px 2px teal;
+  background-color: var(--clr-black);
+  }
+  
+  .deleteAll:hover {
+  background-color: var(--mainRed);
+  color: snow;
+  }

@@ -1,0 +1,25 @@
+.image2{
+    width: 100%;
+    height: 100%;
+    /* pour que l'image prenne toute la place */
+    object-fit: cover; 
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+  }
+/*!  */
+  .home_page_title {
+  letter-spacing: 5px;
+    color: darkslateblue;
+    font-weight: bold;
+    text-align: center;
+    font-family: cursive;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+  }

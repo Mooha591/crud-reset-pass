@@ -1,0 +1,163 @@
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+    --primaryLightColor: #d4e6a5;
+    --primaryColor: #476a2e;
+    --primaryDarkColor: #c02c03;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBackground: #f1f5f8;
+    --mainOverlay: rgba(35, 10, 36, 0.4);
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #afafaf;
+    --mainRed: #bd0303;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.3rem;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    --mainBorderRadius: 0.25rem;
+    --smallWidth: 85vw;
+    --maxWidth: 40rem;
+    --fullWidth: 1170px;
+  
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+
+
+    
+
+    .container-register {
+      margin-top: 90px; /* Ajoutez une marge supérieure pour éviter le chevauchement avec la barre de navigation */
+      text-align: center; /* Centrer le contenu dans le conteneur */
+    
+      /* Ajoutez d'autres styles spécifiques à votre mise en page en vue mobile si nécessaire */
+    }
+    
+  
+    
+  
+  /* Register */
+  
+  h1 {/*!  */
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  margin: 2rem auto;
+  }
+  
+  .form {
+    display: grid;/*!  */
+    background: var(--clr-white);
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+  }
+  
+  label {
+    font-weight: bold;/*!  */
+  }
+  .form-control {
+    background: transparent;
+    border: 1px solid var(--primaryColor);
+    border-radius: var(--mainBorderRadius);
+    color: var(--primaryColor);
+    font-size: 1rem;
+    letter-spacing: var(--mainSpacing);
+    padding: 0.5rem 0.75rem;
+    text-transform: capitalize;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: var(--mainTransition); 
+  }
+  
+  
+  
+  
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--primaryColor);
+    border-radius: var(--mainBorderRadius);
+    color: var(--primaryColor);
+  }
+  
+  .btn-register{
+  margin: 0 auto; /*! <------ pour centrer btn register on le met dans une div et on passe form à display grid  */
+  }
+  .btn {
+    font-weight: 800; /*!  */
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    transition: var(--mainTransition); 
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: transparent;
+    border-radius: var(--mainBorderRadius);
+    display: inline-block;
+  }
+  .btn:hover {
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+  }
+  
+  
+  
+  
+  /** dark-mode */
+  
+  
+  .dark-mode .form-control{
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    border-color: var(--clr-grey-5);
+  }
+  
+  .dark-mode .form-control::placeholder{
+    color: var(--clr-grey-3);
+  }
+  
+  .dark-mode .btn {
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    border-color: var(--clr-grey-5);
+  }
+  
+  .btn:hover{
+  color: var(--darkGrey);
+  background-color: rgb(59, 58, 58);
+  }
+  
+
+.dark-mode .container-reset {
+
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  border-color: var(--clr-grey-5);
+
+}
+
+
+  
+  
+  
